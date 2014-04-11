@@ -1,9 +1,9 @@
 CREATE DATABASE Arrenda_me;
 
 
-CREATE TABLE Users
+CREATE TABLE [User]
 (
-  id_User int NOT NULL PRIMARY KEY,
+  id_User int identity(1,1) NOT NULL PRIMARY KEY,
   email varchar(50) NOT NULL,
   pass varchar(20) NOT NULL,
   contact int,
@@ -38,4 +38,14 @@ description varchar(MAX)  NOT NULL,
 id_User int  NOT NULL, 
 FOREIGN KEY (id_User) REFERENCES Users(id_User),
 id_Property int NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE Attribute
+(
+	id__Attribute int identity(1,1) PRIMARY KEY,
+	mobilado bit,
+	equipado bit,
+	elevador bit,
+	animais bit,
+	piscina bit,
 );

@@ -49,3 +49,19 @@ CREATE TABLE Attribute
 	animais bit,
 	piscina bit,
 );
+
+CREATE TABLE [Notification]
+
+(	
+Id_Notification INT NOT NULL PRIMARY KEY,
+Name varchar (50),
+Contact int,
+Email varchar (50),
+Mensage varchar (Max),
+id_User Int,
+id_Announcement int, 
+FOREIGN KEY (id_User) REFERENCES [User](id_User),
+FOREIGN KEY (id_Announcement) REFERENCES [Announcement](id_Announcement),
+
+
+)

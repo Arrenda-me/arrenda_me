@@ -56,7 +56,7 @@ CREATE TABLE Attribute
 	equipped bit,
 	lift bit,
 	animals bit,
-	pool bit,
+	[pool] bit,
 );
 
 CREATE TABLE [Notification]

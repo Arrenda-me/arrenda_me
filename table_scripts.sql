@@ -19,6 +19,7 @@ CREATE TABLE Announcement
 	Latitude FLOAT NOT NULL,
 	StartDate DATETIME NOT NULL,
 	EndDate DATETIME NOT NULL
+	FOREIGN KEY (id_Property) REFERENCES Property(id_Property)
 )
 CREATE INDEX Announcement_Index
 ON Announcement (Price, Longitude, Latitude)
@@ -26,15 +27,15 @@ ON Announcement (Price, Longitude, Latitude)
 
  CREATE TABLE Property
 (
-id_District int,
-id_City int,
-id_Locality int, --freguesia
-id_Classification int,
-active bit,
-area int,
-title varchar(255),
-description varchar(MAX),
-id_User int, 
+id_District int  NOT NULL,
+id_City int  NOT NULL,
+id_Locality int  NOT NULL, --freguesia
+id_Classification int  NOT NULL,
+active bit  NOT NULL,
+area int NULL,
+title varchar(255)  NOT NULL,
+description varchar(MAX)  NOT NULL,
+id_User int  NOT NULL, 
 FOREIGN KEY (id_User) REFERENCES Users(id_User),
 id_Property int NOT NULL PRIMARY KEY
 );

@@ -1,8 +1,8 @@
 CREATE TABLE Users
 (
   id_User int NOT NULL PRIMARY KEY,
-  email varchar(50),
-  pass varchar(20),
+  email varchar(50) NOT NULL,
+  pass varchar(20) NOT NULL,
   contact int,
 );
 

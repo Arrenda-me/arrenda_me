@@ -41,20 +41,14 @@ FOREIGN KEY (id_User) REFERENCES Users(id_User),
 id_Property int NOT NULL PRIMARY KEY
 );
 
-CREATE TABLE Typology
-(
-	Id_Typology INT PRIMARY KEY NOT NULL,
-	[Type] VARCHAR(2)
-)
-
 CREATE TABLE Attribute
 (
 	id__Attribute int identity(1,1) PRIMARY KEY,
-	mobilado bit,
-	equipado bit,
-	elevador bit,
-	animais bit,
-	piscina bit,
+	furnished bit,
+	equipped bit,
+	lift bit,
+	animals bit,
+	pool bit,
 );
 
 CREATE TABLE [Notification]

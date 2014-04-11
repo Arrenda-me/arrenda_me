@@ -41,6 +41,12 @@ FOREIGN KEY (id_User) REFERENCES Users(id_User),
 id_Property int NOT NULL PRIMARY KEY
 );
 
+CREATE TABLE Typology
+(
+	Id_Typology INT PRIMARY KEY NOT NULL,
+	[Type] VARCHAR(2)
+)
+
 CREATE TABLE Attribute
 (
 	id__Attribute int identity(1,1) PRIMARY KEY,

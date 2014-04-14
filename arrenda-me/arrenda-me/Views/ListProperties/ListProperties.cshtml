@@ -2,33 +2,109 @@
 @{
     ViewBag.Title = "Anúncios";
 }
-
-<body>
+<link rel=”stylesheet” type=”text/css” href=”Site.css” />
+<body style="background-color:black">
     <div style="width: 30%; height: 100%; background-color: blue; float: left" >
         <h4><strong>Pesquisa</strong></h4>
-       
-        <ul>
-            <li>Tipologia</li>
-            <li>Cidade</li>
-            <li>Concelho</li>
-            <li>Freguesia</li>
-            <li>Área</li>
-            <li>Nº Wc</li>
-            <li>Preço</li>
-        </ul>
-            <h5><strong>Características:</strong></h5>
-        <ul>
-            <li>Mobilado <input type="checkbox" name=alinhamento value="esquerda"></li>
-            <li>Equipado <input type="checkbox" name=alinhamento value="esquerda"></li>
-            <li>Piscina <input type="checkbox" name=alinhamento value="esquerda"></li>
-            <li>Garagem @Html.CheckBox("Teste")</li>
-            <li>Varanda @Html.CheckBox("Teste")</li>
-            <li>Elevador @Html.CheckBox("Teste")</li>
-            <li>Porteiro @Html.CheckBox("Teste")</li>
-            <li>Jardim @Html.CheckBox("Teste")</li>
-            <li>Animais @Html.CheckBox("Teste")</li>
+        <table>
+            <tr>
+                <td>Tipologia </td>
+                <td>
+                    <select  class="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Cidade</td>
+                <td>
+                    <select class="select">
+                        <option>Lisboa</option>
 
-        </ul>
+                    </select>
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <td>Concelho</td>
+                <td>
+                    <select class="select"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>Freguesia</td>
+                <td>
+                    <select class="select"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>Nº Wc</td>
+                <td>
+                    <select class="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Área</td>
+                <td><input type="range" name="range1" min="50" max="500" step="20" value="100" /></td>
+            </tr>
+            <tr>
+                <td>Preço</td>
+                <td><input type="range" name="range1" min="50" max="500" step="20" value="100" /></td>
+            </tr>
+        </table>
+        <h5><strong>Características:</strong></h5>
+        <table>
+           
+            <tr>
+                <td>Mobilado</td>
+                <td><input class="checkbox" type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Equipado</td>
+                <td><input class="checkbox" type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Piscina</td>
+                <td><input class="checkbox" type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Garagem</td>
+                <td><input class="checkbox" type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Varanda</td>
+                <td><input class="checkbox" type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Elevador</td>
+                <td><input class="checkbox" type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Porteiro</td>
+                <td><input class ="checkbox" type="checkbox"></td>
+            </tr> 
+            <tr>
+                <td>Jardim</td>
+                <td><input class="checkbox" type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Animais</td>
+                <td><input class="checkbox" type="checkbox"></td>
+            </tr>
+        </table>
+   
     </div>
     <div style="width: 70%; height: 100%; background-color: orange; float: right ">
         

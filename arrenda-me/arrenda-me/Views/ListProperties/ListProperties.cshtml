@@ -6,6 +6,7 @@
 <body>
     <div style="width: 30%; height: 100%; background-color: blue; float: left" >
         <h4><strong>Pesquisa</strong></h4>
+       
         <ul>
             <li>Tipologia</li>
             <li>Cidade</li>
@@ -16,15 +17,16 @@
             <li>Preço</li>
         </ul>
             <h5><strong>Características:</strong></h5>
-            <ul><li>Mobilado</li>
-            <li>Equipado</li>
-            <li>Piscina</li>
-            <li>Garagem</li>
-            <li>Varanda</li>
-            <li>Elevador</li>
-            <li>Porteiro</li>
-            <li>Jardim</li>
-            <li>Animais</li>
+        <ul>
+            <li>Mobilado <input type="checkbox" name=alinhamento value="esquerda"></li>
+            <li>Equipado <input type="checkbox" name=alinhamento value="esquerda"></li>
+            <li>Piscina <input type="checkbox" name=alinhamento value="esquerda"></li>
+            <li>Garagem @Html.CheckBox("Teste")</li>
+            <li>Varanda @Html.CheckBox("Teste")</li>
+            <li>Elevador @Html.CheckBox("Teste")</li>
+            <li>Porteiro @Html.CheckBox("Teste")</li>
+            <li>Jardim @Html.CheckBox("Teste")</li>
+            <li>Animais @Html.CheckBox("Teste")</li>
 
         </ul>
     </div>
@@ -124,4 +126,5 @@
             </tr>
         </table>
     </div>
+
 </body>

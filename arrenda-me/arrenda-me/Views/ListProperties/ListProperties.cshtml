@@ -3,10 +3,10 @@
     ViewBag.Title = "Anúncios";
 }
 
-<body>
-    <div style="width: 30%; height: 100%; background-color: blue; float: left" >
+<body style="background-color:black">
+    <div style="width: 30%; height: 100%; background-color: blue; float: left">
         <h4><strong>Pesquisa</strong></h4>
-       
+
         <ul>
             <li>Tipologia</li>
             <li>Cidade</li>
@@ -16,7 +16,7 @@
             <li>Nº Wc</li>
             <li>Preço</li>
         </ul>
-            <h5><strong>Características:</strong></h5>
+        <h5><strong>Características:</strong></h5>
         <ul>
             <li>Mobilado <input type="checkbox" name=alinhamento value="esquerda"></li>
             <li>Equipado <input type="checkbox" name=alinhamento value="esquerda"></li>
@@ -30,101 +30,86 @@
 
         </ul>
     </div>
-    <div style="width: 70%; height: 100%; background-color: orange; float: right ">
-        
+    <div class="list_property">
+
         <div style="height: 30%; background-color: red">
             MAPA
         </div>
 
         <p>LISTA DAS CASAS</p>
 
-        <table border="1" align="center">
-            <tr>
+        <table align="center">
+            <tr class="line_table_list_property">
                 <td colspan="2">
-                    Casa 1
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
+                    <br />
+                    Descrição
                 </td>
-                <td colspan="2">
-                    Espaço
+                <td colspan="2"></td>
+                <td class="line_table_list_property" colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
+                    <br />
+                    Descrição
                 </td>
+                <td colspan="2"></td>
                 <td colspan="2">
-                    Casa 2
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Casa 3
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Espaço
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
+                    <br />
+                    Descrição
                 </td>
             </tr>
             <tr>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr class="line_table_list_property">
                 <td colspan="2">
-                    Casa 4
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
+                    <br />
+                    Descrição
                 </td>
-                <td colspan="2">
-                    Espaço
+                <td colspan="2"></td>
+                <td class="line_table_listagem_anuncios" colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
+                    <br />
+                    Descrição
                 </td>
+                <td colspan="2"></td>
                 <td colspan="2">
-                    Casa 5
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Casa 6
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
+                    <br />
+                    Descrição
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
             </tr>
-            <tr>
+            <tr class="line_table_list_property">
                 <td colspan="2">
-                    Casa 7
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
+                    <br />
+                    Descrição
                 </td>
-                <td colspan="2">
-                    Espaço
+                <td colspan="2"></td>
+                <td class="line_table_listagem_anuncios" colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
+                    <br />
+                    Descrição
                 </td>
+                <td colspan="2"></td>
                 <td colspan="2">
-                    Casa 8
-                </td>
-                <td colspan="2">
-                    Espaço
-                </td>
-                <td colspan="2">
-                    Casa 9
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
+                    <br />
+                    Descrição
                 </td>
             </tr>
         </table>
     </div>
-
 </body>

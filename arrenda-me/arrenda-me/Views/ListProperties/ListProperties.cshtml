@@ -2,42 +2,15 @@
 @{
     ViewBag.Title = "Anúncios";
 }
-<<<<<<< HEAD
-
-<body style="background-color:black">
-    <div style="width: 30%; height: 100%; background-color: blue; float: left">
-        <h4><strong>Pesquisa</strong></h4>
-
-        <ul>
-            <li>Tipologia</li>
-            <li>Cidade</li>
-            <li>Concelho</li>
-            <li>Freguesia</li>
-            <li>Área</li>
-            <li>Nº Wc</li>
-            <li>Preço</li>
-        </ul>
-        <h5><strong>Características:</strong></h5>
-        <ul>
-            <li>Mobilado <input type="checkbox" name=alinhamento value="esquerda"></li>
-            <li>Equipado <input type="checkbox" name=alinhamento value="esquerda"></li>
-            <li>Piscina <input type="checkbox" name=alinhamento value="esquerda"></li>
-            <li>Garagem @Html.CheckBox("Teste")</li>
-            <li>Varanda @Html.CheckBox("Teste")</li>
-            <li>Elevador @Html.CheckBox("Teste")</li>
-            <li>Porteiro @Html.CheckBox("Teste")</li>
-            <li>Jardim @Html.CheckBox("Teste")</li>
-            <li>Animais @Html.CheckBox("Teste")</li>
-=======
 <link rel=”stylesheet” type=”text/css” href=”Site.css” />
 <body style="background-color:black">
-    <div style="width: 30%; height: 100%; background-color: blue; float: left" >
+    <div style="width: 30%; height: 100%; background-color: blue; float: left">
         <h4><strong>Pesquisa</strong></h4>
         <table>
             <tr>
                 <td>Tipologia </td>
                 <td>
-                    <select  class="select">
+                    <select class="select">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -52,12 +25,11 @@
                 <td>
                     <select class="select">
                         <option>Lisboa</option>
->>>>>>> eb80ed0360d89e2dd6bca4ac78c0559a739ac050
 
                     </select>
                 </td>
             </tr>
-           
+
             <tr>
                 <td>Concelho</td>
                 <td>
@@ -94,7 +66,7 @@
         </table>
         <h5><strong>Características:</strong></h5>
         <table>
-           
+
             <tr>
                 <td>Mobilado</td>
                 <td><input class="checkbox" type="checkbox"></td>
@@ -121,8 +93,8 @@
             </tr>
             <tr>
                 <td>Porteiro</td>
-                <td><input class ="checkbox" type="checkbox"></td>
-            </tr> 
+                <td><input class="checkbox" type="checkbox"></td>
+            </tr>
             <tr>
                 <td>Jardim</td>
                 <td><input class="checkbox" type="checkbox"></td>
@@ -176,7 +148,7 @@
                     Descrição
                 </td>
                 <td colspan="2"></td>
-                <td class="line_table_listagem_anuncios" colspan="2">
+                <td class="line_table_list_property" colspan="2">
                     <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
                     <br />
                     Descrição
@@ -202,7 +174,7 @@
                     Descrição
                 </td>
                 <td colspan="2"></td>
-                <td class="line_table_listagem_anuncios" colspan="2">
+                <td class="line_table_list_property" colspan="2">
                     <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
                     <br />
                     Descrição
@@ -216,4 +188,6 @@
             </tr>
         </table>
     </div>
+
+
 </body>

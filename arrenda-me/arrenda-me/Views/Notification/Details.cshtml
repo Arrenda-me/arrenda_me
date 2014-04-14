@@ -1,0 +1,15 @@
+﻿@model IEnumerable<arrenda_me.Models.Notification>
+@{
+    ViewBag.Title = "Notificação";
+}
+<h3>Browse not</h3>
+<p>
+    Select from @Model.Count()
+    notifications:
+</p>
+<ul>
+    @foreach (var notification in Model)
+    {
+        <li>@notification.id</li>
+    }
+</ul>

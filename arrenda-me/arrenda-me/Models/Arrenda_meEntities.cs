@@ -12,6 +12,8 @@ namespace arrenda_me.Models
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Property> Properties { get; set; }
 
+        public DbSet<Attribute> Attributes { get; set; }
+
         public Arrenda_meEntities()
         {
 

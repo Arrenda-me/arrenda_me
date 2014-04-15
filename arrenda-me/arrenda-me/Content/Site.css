@@ -25,6 +25,7 @@
 }
 
 .list_property{
+    margin-top:10%;
     width: 80%;
     height: 100%; 
     float: right; 
@@ -33,9 +34,12 @@
 }
 
 .filter_list {
+    margin-top:10%;
+    margin-left:5%;
     width: 20%;
     height: 100%; 
     float: left;
+    position:fixed;
 }
 td:first-child {
     color:#A63800;
@@ -55,13 +59,20 @@ td:nth-child(5) {
 
 }
 #maps {
-    height: 30%;
+     height: 30%;
      background-color: blue;
 }
 
 #tab {
     
-    height:30px;
+    height:33px;
     border-radius:1%;
 }
+.pagination {
+    color:orange;
+    font-weight:bold;
+    display:block;
+    margin-left:30
 
+}
+   

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace arrenda_me.Models
 {
@@ -10,6 +11,11 @@ namespace arrenda_me.Models
         public int id { get; set; }
 
         public int idTipology { get; set; }
+
+
+        public virtual User Parent { get; set; }
+
+        [ForeignKey("Parent")]
 
         public int idOwner { get; set; }
 

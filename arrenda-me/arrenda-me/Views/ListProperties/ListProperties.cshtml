@@ -3,14 +3,14 @@
     ViewBag.Title = "Anúncios";
 }
 <link rel=”stylesheet” type=”text/css” href=”Site.css” />
-<body style="background-color:black">
-    <div style="width: 30%; height: 100%; background-color: blue; float: left">
-        <h4><strong>Pesquisa</strong></h4>
+<body>
+    <div class="filter_list">
+        <h3 style="color:#FF5600"><strong>Pesquisa</strong></h3>
         <table>
             <tr>
                 <td>Tipologia </td>
                 <td>
-                    <select class="select">
+                    <select class="select" >
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -27,13 +27,6 @@
                         <option>Lisboa</option>
 
                     </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Concelho</td>
-                <td>
-                    <select class="select"></select>
                 </td>
             </tr>
             <tr>
@@ -64,130 +57,167 @@
                 <td><input type="range" name="range1" min="50" max="500" step="20" value="100" /></td>
             </tr>
         </table>
-        <h5><strong>Características:</strong></h5>
+        <h4 style ="color:#FF5600"><strong>Características:</strong></h4>
         <table>
 
             <tr>
                 <td>Mobilado</td>
-                <td><input class="checkbox" type="checkbox"></td>
+                <td><input type="checkbox"></td>
             </tr>
             <tr>
                 <td>Equipado</td>
-                <td><input class="checkbox" type="checkbox"></td>
+                <td><input type="checkbox"></td>
             </tr>
             <tr>
                 <td>Piscina</td>
-                <td><input class="checkbox" type="checkbox"></td>
+                <td><input type="checkbox"></td>
             </tr>
             <tr>
                 <td>Garagem</td>
-                <td><input class="checkbox" type="checkbox"></td>
+                <td><input type="checkbox"></td>
             </tr>
             <tr>
                 <td>Varanda</td>
-                <td><input class="checkbox" type="checkbox"></td>
+                <td><input type="checkbox"></td>
             </tr>
             <tr>
                 <td>Elevador</td>
-                <td><input class="checkbox" type="checkbox"></td>
+                <td><input type="checkbox"></td>
             </tr>
             <tr>
                 <td>Porteiro</td>
-                <td><input class="checkbox" type="checkbox"></td>
+                <td><input type="checkbox"></td>
             </tr>
             <tr>
                 <td>Jardim</td>
-                <td><input class="checkbox" type="checkbox"></td>
+                <td><input type="checkbox"></td>
             </tr>
             <tr>
                 <td>Animais</td>
-                <td><input class="checkbox" type="checkbox"></td>
+                <td><input type="checkbox"></td>
             </tr>
         </table>
-        <button type="button" class="btn btn-warning">Warning</button>
+        <p></p>
+        <button type="button" class="btn btn-warning">Pesquisa</button>
     </div>
     <div class="list_property">
 
-        <div style="height: 30%; background-color: red">
-            MAPA
+        <div id="maps">
+            <script src="https://www.google.pt/maps/preview"></script>
         </div>
 
-        <p>LISTA DAS CASAS</p>
-
-        <table align="center">
-            <tr class="line_table_list_property">
-                <td colspan="2">
-                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
-                    <br />
-                    Descrição
-                </td>
-                <td colspan="2"></td>
-                <td class="line_table_list_property" colspan="2">
-                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
-                    <br />
-                    Descrição
-                </td>
-                <td colspan="2"></td>
-                <td colspan="2">
-                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
-                    <br />
-                    Descrição
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-            </tr>
-            <tr class="line_table_list_property">
-                <td colspan="2">
-                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
-                    <br />
-                    Descrição
-                </td>
-                <td colspan="2"></td>
-                <td class="line_table_list_property" colspan="2">
-                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
-                    <br />
-                    Descrição
-                </td>
-                <td colspan="2"></td>
-                <td colspan="2">
-                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
-                    <br />
-                    Descrição
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-                <td colspan="2"></td>
-            </tr>
-            <tr class="line_table_list_property">
-                <td colspan="2">
-                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
-                    <br />
-                    Descrição
-                </td>
-                <td colspan="2"></td>
-                <td class="line_table_list_property" colspan="2">
-                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
-                    <br />
-                    Descrição
-                </td>
-                <td colspan="2"></td>
-                <td colspan="2">
-                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="200" height="150" /></a>
-                    <br />
-                    Descrição
-                </td>
-            </tr>
-        </table>
-    </div>
-
-
+       
+            @*Barra de pesquisa do site*@
+            @*<form method=GET action=http://www.google.com/search>*@
+        <div align="center">
+            <input type=hidden name=sitesearch/><input id="tab" type=text name=q size=80>&nbsp;&nbsp;<input height="100" type=submit class="btn btn-warning" value=Pesquisar>
+        </div>
+        <p></p>
+            <table align="center">
+                <tr>
+                    <td colspan="6">
+                        <p></p>
+                        Ordenar por:
+                    <select id="pesquisaSelect">
+                        <option>Preço</option>
+                        <option>Tipologia</option>
+                        <option>Data</option>
+                    </select>
+                        &nbsp;
+                        <input  height="50" type=submit class="btn btn-warning" value=Crescente> 
+                    </td>
+                </tr> 
+                <tr class="line_table_list_property">
+                            
+                    <td colspan="2">
+                        <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                        <br />
+                        Descrição
+                    </td>
+                    <td colspan="2"></td>
+                    <td class="line_table_list_property" colspan="2">
+                        <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                        <br />
+                        Descrição
+                    </td>
+                    <td colspan="2"></td>
+                    <td colspan="2">
+                        <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                        <br />
+                        Descrição
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr class="line_table_list_property">
+                    <td colspan="2">
+                        <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                        <br />
+                        Descrição
+                    </td>
+                    <td colspan="2"></td>
+                    <td class="line_table_list_property" colspan="2">
+                        <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                        <br />
+                        Descrição
+                    </td>
+                    <td colspan="2"></td>
+                    <td colspan="2">
+                        <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                        <br />
+                        Descrição
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr class="line_table_list_property">
+                    <td colspan="2">
+                        <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                        <br />
+                        Descrição
+                    </td>
+                    <td colspan="2"></td>
+                    <td class="line_table_list_property" colspan="2">
+                        <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                        <br />
+                        Descrição
+                    </td>
+                    <td colspan="2"></td>
+                    <td colspan="2">
+                        <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                        <br />
+                        Descrição
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="10" >
+                        <p></p>
+                        <div align="center">
+                            <ul class="pagination">
+                                <li><a href="">&laquo;</a></li>
+                                <li><a href="">1</a></li>
+                                <li><a href="">2</a></li>
+                                <li><a href="">3</a></li>
+                                <li><a href="">4</a></li>
+                                <li class="unavailable"><a href="">&hellip;</a></li>
+                                <li><a href="">12</a></li>
+                                <li><a href="">13</a></li>
+                                <li class="arrow"><a href="">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr> 
+            </table>
+</div>
+ 
 </body>

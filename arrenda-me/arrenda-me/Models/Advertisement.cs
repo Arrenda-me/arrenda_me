@@ -18,8 +18,14 @@ namespace arrenda_me.Models
         public int price { get; set; }
         public float latitude { get; set; }
         public float longitude { get; set; }
-        public int startDate { get; set; }
-        public int endDate { get; set; }
+        public DateTime startDate { get; set; }
+        public DateTime endDate { get; set; }
+
+        public bool active { get; set; }
+
+        public string title { get; set; }
+
+        public string description { get; set; }
 
 
     }

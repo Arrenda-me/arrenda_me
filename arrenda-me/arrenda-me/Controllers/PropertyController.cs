@@ -9,7 +9,7 @@ namespace arrenda_me.Controllers
     public class PropertyController : Controller
     {
 
-        Models.Arrenda_meEntities arrendaDB = new Models.Arrenda_meEntities();
+        private Models.Arrenda_meEntities arrendaDB = new Models.Arrenda_meEntities();
 
         public ActionResult ListProperties()
         {

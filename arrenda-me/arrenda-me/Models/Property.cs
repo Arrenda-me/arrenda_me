@@ -27,10 +27,5 @@ namespace arrenda_me.Models
 
         public int area { get; set; }
 
-        public bool active { get; set; }
-
-        public string title { get; set; }
-
-        public string description { get; set; }
     }
 }

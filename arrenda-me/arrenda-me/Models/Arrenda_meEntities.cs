@@ -14,8 +14,13 @@ namespace arrenda_me.Models
 
         public DbSet<Attribute> Attributes { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<Advertisement> Advertisement { get; set; }
+
+
         public Arrenda_meEntities()
-        {
+        {/*
 
             Property a = new Property { id=1, idTipology=1, idOwner=1, idDistrict=1, idLocality=1, active=true,
                 area=43, description="apartamento mobilado na margem sul", idCity=1, 
@@ -58,7 +63,7 @@ namespace arrenda_me.Models
 
            this.Notifications.Add(new Notification { id=1, senderName="Tania", phoneNumber=91333, email="sds", body="Quero comprar", idUser=1, idAdvertisement=1 });
            this.SaveChanges();
-           
+           */
             
         }
 

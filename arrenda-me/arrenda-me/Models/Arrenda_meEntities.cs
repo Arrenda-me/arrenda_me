@@ -11,56 +11,30 @@ namespace arrenda_me.Models
 
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Property> Properties { get; set; }
-
-        public DbSet<Attribute> Attributes { get; set; }
+        
+        public DbSet<Tipology> Tipologies { get; set; }
 
         public DbSet<User> Users { get; set; }
 
         public Arrenda_meEntities()
         {
-
-            this.Properties.Add(new Property
-            {
-                
-                idTipology = 1,
-                idOwner = 1,
-                description = "descriçao",
-               title = "titulo",
-               active = true,
-               endDate = new DateTime(),
-               startDate = new DateTime(),
-              
-               latitude = 3,
-               longitude = (float)3.55,
-               price = 50,
-                idLocality = 1,
-                area = 43,
-                idCity = 1
-            });
-            this.Properties.Add(new Property
-            {
-                  
-                idTipology = 1,
-                idOwner = 1,              
-                description = "descriçao",
-               title = "titulo",
-               active = true,
-               endDate = new DateTime(),
-               startDate = new DateTime(),
            
-               latitude = 3,
-               longitude = (float)3.55,
-               price = 50,
-                idLocality = 1,           
-                area = 43,
-                idCity = 1
-            });
+            Services.ArrendaService service = new Services.ArrendaService();
+
+            service.createUser("mail", "password", 123);
+            service.createUser("mail2", "password2", 123);
+            service.createAdvertisement("description", "title", 1, 300, (float)300.05, (float)51.008,
+            1, 2, 4, 1, 59);
+            service.createAdvertisement("description2", "title2", 2, 350, (float)300.05, (float)51.008,
+1, 2, 4, 2, 51);
 
 
-           this.Notifications.Add(new Notification { senderName="sender", phoneNumber=91333, email="sds", body="Quero comprar", idUser=1, idProperty=1 });
-
-
-           this.Users.Add(new User { password = "pass", email = "mail@mail.com", contact = 3 });
+           this.Tipologies.Add(new Tipology { title = "T1" });
+           this.Tipologies.Add(new Tipology { title = "T2" });
+           this.Tipologies.Add(new Tipology { title = "T3" });
+           this.Tipologies.Add(new Tipology { title = "T4" });
+           this.Tipologies.Add(new Tipology { title = "T5" });
+           this.Tipologies.Add(new Tipology { title = ">T5" });
             
             this.SaveChanges();
            

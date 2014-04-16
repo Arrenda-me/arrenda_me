@@ -6,9 +6,17 @@ using System.Web;
 
 namespace arrenda_me.Services
 {
-    public class ArrendaService
+    public  class ArrendaService
     {
         private Models.Arrenda_meEntities arrendaDB = new Models.Arrenda_meEntities();
+
+
+
+        public void sendNotification()
+        {
+
+
+        }
 
         public void createUser(string email, string password, int contact){            
             arrendaDB.Users.Add( new Models.User { email=email, password=password, contact=contact});

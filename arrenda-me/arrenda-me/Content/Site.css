@@ -36,7 +36,7 @@
 
 .filter_list {
     margin-top:10%;
-    margin-left:5%;
+    margin-left:5px;
     width: 20%;
     height: 100%; 
     float: left;
@@ -78,8 +78,10 @@ td:nth-child(5) {
     
 
 }
-        #map-canvas {
+#map-canvas {
             height: 200px;
-            width:800px;
-            margin-left:120px;
+            width:75%;
+            margin-left:12%
         }
+
+

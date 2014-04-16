@@ -13,7 +13,7 @@ namespace arrenda_me.Models
 
         public virtual Property Parent { get; set; }
 
-                [ForeignKey("Parent")]
+     //           [ForeignKey("Parent")]
         public int idProperty { get; set; }
         public int price { get; set; }
         public float latitude { get; set; }

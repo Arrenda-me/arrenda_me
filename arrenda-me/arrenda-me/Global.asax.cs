@@ -14,6 +14,7 @@ namespace arrenda_me
         {
    //      System.Data.Entity.Database.SetInitializer(  new arrenda_me.Models.SampleData());
 
+
             System.Data.Entity.Database.SetInitializer<arrenda_me.Models.Arrenda_meEntities>(
 new System.Data.Entity.DropCreateDatabaseIfModelChanges<arrenda_me.Models.Arrenda_meEntities>());
 

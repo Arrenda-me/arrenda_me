@@ -16,55 +16,54 @@ namespace arrenda_me.Models
 
         public DbSet<User> Users { get; set; }
 
-        public DbSet<Advertisement> Advertisement { get; set; }
-
-
         public Arrenda_meEntities()
-        {/*
+        {
 
-            Property a = new Property { id=1, idTipology=1, idOwner=1, idDistrict=1, idLocality=1, active=true,
-                area=43, description="apartamento mobilado na margem sul", idCity=1, 
-                title="apartamento"};
-
-
-            Property b = new Property
+            this.Properties.Add(new Property
             {
-                id = 3,
+                
                 idTipology = 1,
                 idOwner = 1,
-                idDistrict = 1,
+                description = "descriçao",
+               title = "titulo",
+               active = true,
+               endDate = new DateTime(),
+               startDate = new DateTime(),
+              
+               latitude = 3,
+               longitude = (float)3.55,
+               price = 50,
                 idLocality = 1,
-                active = true,
                 area = 43,
-                description = "aparteste",
-                idCity = 1,
-                title = "teste"
-            };
-
-
-            Property c = new Property
+                idCity = 1
+            });
+            this.Properties.Add(new Property
             {
-                id = 2,
+                  
                 idTipology = 1,
-                idOwner = 1,
-                idDistrict = 1,
-                idLocality = 1,
-                active = true,
+                idOwner = 1,              
+                description = "descriçao",
+               title = "titulo",
+               active = true,
+               endDate = new DateTime(),
+               startDate = new DateTime(),
+           
+               latitude = 3,
+               longitude = (float)3.55,
+               price = 50,
+                idLocality = 1,           
                 area = 43,
-                description = "apartamento teste",
-                idCity = 1,
-                title = "apartamento 43"
-            };
-
-            this.Properties.Add(a);
-            this.Properties.Add(b);
-            this.Properties.Add(c);
+                idCity = 1
+            });
 
 
-           this.Notifications.Add(new Notification { id=1, senderName="Tania", phoneNumber=91333, email="sds", body="Quero comprar", idUser=1, idAdvertisement=1 });
-           this.SaveChanges();
-           */
+           this.Notifications.Add(new Notification { senderName="sender", phoneNumber=91333, email="sds", body="Quero comprar", idUser=1, idProperty=1 });
+
+
+           this.Users.Add(new User { password = "pass", email = "mail@mail.com", contact = 3 });
             
+            this.SaveChanges();
+           
         }
 
     }

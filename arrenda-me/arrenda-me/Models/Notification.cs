@@ -13,8 +13,6 @@ namespace arrenda_me.Models
         public string email { get; set; }
         public string body { get; set; }
         public int idUser { get; set; }
-        public int idAdvertisement { get; set; }
-
-
+        public int idProperty { get; set; }
     }
 }

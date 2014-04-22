@@ -24,5 +24,13 @@ namespace arrenda_me.Controllers
            
             return View();
         }
+
+
+
+        public ActionResult ViewProperty()
+        {
+
+            return View();
+        }
 	}
 }

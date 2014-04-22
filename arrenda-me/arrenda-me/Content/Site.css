@@ -1,3 +1,6 @@
+/*===========================
+    ListProperties
+    */
 .select{
     margin-left:4px;
     width:90px;
@@ -94,3 +97,10 @@ td:nth-child(5) {
 .escondida {
         display: none;
     }
+/*===========================
+    ViewProperty
+    */
+h3 {
+    color:#A63800;
+    font-weight:bold;
+}

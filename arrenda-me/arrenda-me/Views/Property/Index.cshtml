@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+
+    function procurarClick() {
+        document.getElementById("1").style.display = "inline";
+        document.getElementById("2").style.display = "none";
+    }
+
+    function arrendarClick() {
+        document.getElementById("2").style.display = "inline";
+        document.getElementById("1").style.display = "none";
+    }
+    window.onload = abrir;
+</script>
+
+<body style="margin-top:20%">
+
+    <div id="central">
+        <input type="button" onclick="procurarClick();" style="margin-left:38%; height:70px; font-size:20px;" class="btn btn-warning" value="Procuro Casa" id="receita1" /> &ensp;&ensp;&ensp;
+        <input type="button" onclick="arrendarClick(); return;" style="height:70px; font-size:20px;" class="btn btn-warning" value="Arrendo Casa" id="receita2" />
+
+        <div id="1" align="center" style="display:none">
+            <br />
+            <br />
+            <div>
+                <input type=hidden name=sitesearch /><input id="tab" type=text size=80 placeholder="Tipologia, Localidade...">&nbsp;&nbsp;<input height=" 100" type=submit class="btn btn-warning" value=Pesquisar>
+
+            </div>
+        </div>
+
+        <div align="center" id="2" style="display:none">
+            <br />
+            <br />
+            <div style="width: 19.5%; font-weight: bold;" class="form-group">
+                <label style=" color:#A63800" for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div style="width: 19.5%; font-weight: bold;" class="form-group">
+                <label style=" color:#A63800" for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+            </div>
+            <div>
+                <button type="button" class="btn btn-warning">Registar</button> &ensp;&ensp;
+                <button type="button" class="btn btn-warning">Recuperar Password</button>
+            </div>
+        </div>
+    </div>
+</body>

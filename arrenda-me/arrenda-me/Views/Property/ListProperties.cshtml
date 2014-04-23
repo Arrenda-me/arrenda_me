@@ -1,7 +1,284 @@
-﻿
+﻿@model IEnumerable<arrenda_me.Models.Property> 
+
+<!DOCTYPE>
 @{
-    ViewBag.Title = "ListProperties";
+    ViewBag.Title = "Anúncios";
 }
 
-<h2>ListProperties</h2>
+<!DOCTYPE html>
 
+<meta name="viewport"  user-scalable=no" />
+
+<script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxlHjGEWG5fuOoc-ADuRXiQ63n4tOQ9ks&sensor=true">
+</script>
+<script type="text/javascript">
+    function initialize() {
+        var mapOptions = {
+            center: new google.maps.LatLng(38.689261574791736, -9.0966796875),
+            zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<body>
+
+
+    <div style="position:fixed"  class="filter_list">
+        <h3 style="color:#FF5600"><strong>Pesquisa</strong></h3>
+        <table>
+            <tr>
+                <td>Tipologia </td>
+                <td>
+                    <select class="select">
+                        @{
+                            if (@Model != null)
+                            {
+
+                                var count = 1;
+                                foreach (var item in @Model)
+                                {
+                                    <option>@item.idTipology</option>
+                                    count = count + 1;
+                                }
+                            }
+                        }
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Cidade</td>
+                <td>
+                    <select class="select">
+                        @{
+                            if (@Model != null)
+                            {
+                                var counter = 1;
+                                foreach (var item in @Model)
+                                {
+                                    <option>@item.idCity</option>
+                                    counter = counter + 1;
+                                }
+                            }
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Freguesia</td>
+                <td>
+                    <select class="select">
+                        @{
+                            if (@Model != null)
+                            {
+                                var countt = 1;
+                                foreach (var item in @Model)
+                                {
+                                    <option>@item.idLocality</option>
+                                    countt = countt + 1;
+                                }
+                            }
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Nº Wc</td>
+                <td>
+                    <select class="select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>>5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Área</td>
+                <td><input type="range" name="range1" min="50" max="500" step="20" value="100" /></td>
+            </tr>
+            <tr>
+                <td>Preço</td>
+                <td> <div id="min_thumb_1" class="ui-slider-handle sliderLeft resultsSprite ui-state-default ui-corner-all" style="left: 0%;"> <span class="leftCursor"></span> </div> <div id="max_thumb_1" class="ui-slider-handle sliderRight resultsSprite ui-state-default ui-corner-all" style="left: 87.5%;"> <span class="rightCursor"></span> </div> <div class="ui-slider-range ui-widget-header" style="left: 0%; width: 87.5%;"></div></td>
+            </tr>
+        </table>
+        <h4 style="color:#FF5600"><strong>Características:</strong></h4>
+        <table >
+
+            <tr>
+                <td>Mobilado</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Equipado</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Piscina</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Garagem</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Varanda</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Elevador</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Porteiro</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Jardim</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Animais</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+        <p></p>
+        <button type="button" class="btn btn-warning">Pesquisa</button>
+    </div>
+
+    <div class="list_property">
+
+        <div id="map-canvas"></div>
+
+
+        @*Barra de pesquisa do site*@
+        <p></p>
+        <p></p>
+        <div align="center">
+            <input type=hidden name=sitesearch  /><input id="tab" type=text name=q size=80 placeholder="Tipologia, Localidade...">&nbsp;&nbsp;<input height="100" type=submit class="btn btn-warning" value=Pesquisar>
+        </div>
+        <p></p>
+        <table align="center">
+            <tr>
+                <td colspan="6">
+                    <p></p>
+                    Ordenar por:
+                    <select id="pesquisaSelect">
+                        <option>Preço</option>
+                        <option>Tipologia</option>
+                        <option>Data</option>
+                    </select>
+                    &nbsp;
+                    <input height="50" type=submit class="btn btn-warning" value=Crescente>
+                </td>
+            </tr>
+            <tr class="line_table_list_property">
+
+                <td colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                    <br />
+                    @*@{
+                         if (@model != null) { 
+                            foreach (var item in @model)
+                            {
+                                <p>tipologia @item.idtipology</p>
+                                
+                            }
+                            }
+                            
+                    }*@
+                </td>
+                <td colspan="2"></td>
+                <td class="line_table_list_property" colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                    <br />
+                    Descrição
+                </td>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                    <br />
+                    Descrição
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr class="line_table_list_property">
+                <td colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                    <br />
+                    Descrição
+                </td>
+                <td colspan="2"></td>
+                <td class="line_table_list_property" colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                    <br />
+                    Descrição
+                </td>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                    <br />
+                    Descrição
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+                <td colspan="2"></td>
+            </tr>
+            <tr class="line_table_list_property">
+                <td colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                    <br />
+                    Descrição
+                </td>
+                <td colspan="2"></td>
+                <td class="line_table_list_property" colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                    <br />
+                    Descrição
+                </td>
+                <td colspan="2"></td>
+                <td colspan="2">
+                    <a href="@Url.Action("Imovel")"><img src="~/content/images/imovel.jpg" width="250" height="200" /></a>
+                    <br />
+                    Descrição
+                </td>
+            </tr>
+            <tr>
+                <td colspan="10">
+                    <p></p>
+                    <div align="center">
+                        <ul class="pagination">
+                            <li><a href="">&laquo;</a></li>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="">&hellip;</a></li>
+                            <li><a href="">12</a></li>
+                            <li><a href="">13</a></li>
+                            <li><a href="">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>

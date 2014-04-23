@@ -15,12 +15,22 @@ namespace arrenda_me.Controllers
         {
 
             var properties = arrendaDB.Properties.ToList();
-            return View(properties);
+
+            return View();
         }
 
         public ActionResult Index()
         {
-            return View("~/Views/Property/ListProperty.cshtml");
+           
+            return View();
+        }
+
+
+
+        public ActionResult ViewProperty()
+        {
+
+            return View();
         }
 	}
 }

@@ -6,58 +6,43 @@ using System.Web;
 
 namespace arrenda_me.Services
 {
-    public  class ArrendaService
+    public class ArrendaService
     {
         private Models.Arrenda_meEntities arrendaDB = new Models.Arrenda_meEntities();
-
-
-
-        public void sendNotification()
-        {
-
-
-        }
 
         public void createUser(string email, string password, int contact){            
             arrendaDB.Users.Add( new Models.User { email=email, password=password, contact=contact});
             arrendaDB.SaveChanges();
         }
 
-        public void createAdvertisement(string description, string title, int idProperty, int price, float latitude, float longitude, 
-            int idTipology, int idLocality, int idCity, int idOwner, int area)
+        public void createAdvertisement(string description, string title, int idProperty, int price, float latitude, float longitude, DateTime startDate, DateTime endDate)
         {
-            arrendaDB.Properties.Add(new Models.Property {          
-             id=idProperty, price=price, latitude=latitude, 
-             longitude=longitude, startDate=DateTime.Today, endDate=DateTime.Today.AddDays(30),
-             active=true, title=title, description=description, area=area, idCity=idCity, idOwner=idOwner,
-             idLocality=idLocality, idTipology = idTipology
+            arrendaDB.Advertisement.Add(new Models.Advertisement {
+            
+             idProperty=idProperty, price=price, latitude=latitude, 
+             longitude=longitude, startDate=startDate, endDate=endDate,
+             active=true, title=title, description=description
+            
             });
             arrendaDB.SaveChanges();
         }
 
 
-        public void deactivateAdvertisement(int idProperty)
+        public void deactivateAdvertisement(int idAdvertisement)
         {
-            Models.Property adv = arrendaDB.Properties.First(i => i.id == idProperty);
+            Models.Advertisement adv = arrendaDB.Advertisement.First(i => i.id == idAdvertisement);
             adv.active = false;
             arrendaDB.SaveChanges();
         }
 
 
-        public void editAdvertisementPrice(int idProperty, int price)
+        public void editAdvertisementPrice(int idAdvertisement, int price)
         {
-            Models.Property adv = arrendaDB.Properties.First(i => i.id == idProperty);
+            Models.Advertisement adv = arrendaDB.Advertisement.First(i => i.id == idAdvertisement);
             adv.price = price;
             arrendaDB.SaveChanges();
         }
 
-
-        public void editAdvertisementDescription(int idProperty, string description)
-        {
-            Models.Property adv = arrendaDB.Properties.First(i => i.id == idProperty);
-            adv.description = description;
-            arrendaDB.SaveChanges();
-        }
 
         public void changeUserPassword(int idUser, string oldPassword, string newPassword){
             Models.User user = arrendaDB.Users.First(i => i.id == idUser);

@@ -11,33 +11,60 @@ namespace arrenda_me.Models
 
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Property> Properties { get; set; }
-        
-        public DbSet<Tipology> Tipologies { get; set; }
+
+        public DbSet<Attribute> Attributes { get; set; }
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<Advertisement> Advertisement { get; set; }
+
+
         public Arrenda_meEntities()
-        {
-           
-            Services.ArrendaService service = new Services.ArrendaService();
+        {/*
 
-            service.createUser("mail", "password", 123);
-            service.createUser("mail2", "password2", 123);
-            service.createAdvertisement("description", "title", 1, 300, (float)300.05, (float)51.008,
-            1, 2, 4, 1, 59);
-            service.createAdvertisement("description2", "title2", 2, 350, (float)300.05, (float)51.008,
-1, 2, 4, 2, 51);
+            Property a = new Property { id=1, idTipology=1, idOwner=1, idDistrict=1, idLocality=1, active=true,
+                area=43, description="apartamento mobilado na margem sul", idCity=1, 
+                title="apartamento"};
 
 
-           this.Tipologies.Add(new Tipology { title = "T1" });
-           this.Tipologies.Add(new Tipology { title = "T2" });
-           this.Tipologies.Add(new Tipology { title = "T3" });
-           this.Tipologies.Add(new Tipology { title = "T4" });
-           this.Tipologies.Add(new Tipology { title = "T5" });
-           this.Tipologies.Add(new Tipology { title = ">T5" });
+            Property b = new Property
+            {
+                id = 3,
+                idTipology = 1,
+                idOwner = 1,
+                idDistrict = 1,
+                idLocality = 1,
+                active = true,
+                area = 43,
+                description = "aparteste",
+                idCity = 1,
+                title = "teste"
+            };
+
+
+            Property c = new Property
+            {
+                id = 2,
+                idTipology = 1,
+                idOwner = 1,
+                idDistrict = 1,
+                idLocality = 1,
+                active = true,
+                area = 43,
+                description = "apartamento teste",
+                idCity = 1,
+                title = "apartamento 43"
+            };
+
+            this.Properties.Add(a);
+            this.Properties.Add(b);
+            this.Properties.Add(c);
+
+
+           this.Notifications.Add(new Notification { id=1, senderName="Tania", phoneNumber=91333, email="sds", body="Quero comprar", idUser=1, idAdvertisement=1 });
+           this.SaveChanges();
+           */
             
-            this.SaveChanges();
-           
         }
 
     }

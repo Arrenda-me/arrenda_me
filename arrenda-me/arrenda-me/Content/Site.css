@@ -1,3 +1,6 @@
+/*===========================
+    ListProperties
+    */
 .select{
     margin-left:4px;
     width:90px;
@@ -26,22 +29,24 @@
 
 .list_property{
     margin-top:10%;
-    width: 80%;
+    width: 82%;
     height: 100%; 
     float: right; 
     border:#ffffff;
-    background:#ffffff;
+    background:#ffffff;   
+    position: relative;
    
+    
 }
 
 .filter_list {
     margin-top:10%;
-    margin-left:5%;
-    width: 20%;
-    height: 100%; 
-    float: left;
-    position:fixed;
+    margin-left:20px;
+    padding-right:10px;
+
+
 }
+
 td:first-child {
     color:#A63800;
     font-weight:bold;
@@ -61,25 +66,41 @@ td:nth-child(5) {
 }
 #maps {
      height: 30%;
-     background-color: blue;
+     
 }
 
 #tab {
     
     height:33px;
     border-radius:1%;
+    position:relative;
 }
 .pagination {
     
     font-weight:bold;
     display:block;
     margin-left:30%;
-    color: #333333 !important;
+   
     
 
 }
-        #map-canvas {
+#map-canvas {
+            position: relative;
             height: 200px;
-            width:800px;
-            margin-left:120px;
+            width:75%;
+            margin-left:130px;
+           
         }
+/*===========================
+    Index
+    */
+.escondida {
+        display: none;
+    }
+/*===========================
+    ViewProperty
+    */
+h3 {
+    color:#A63800;
+    font-weight:bold;
+}

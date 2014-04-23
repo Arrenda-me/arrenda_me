@@ -10,9 +10,9 @@ namespace arrenda_me.Controllers
     {
         //
         // GET: /Home/
-        public string Index()
+        public ActionResult Index()
         {
-            return "okok";
+            return View();
         }
 	}
 }

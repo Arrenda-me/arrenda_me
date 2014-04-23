@@ -13,7 +13,7 @@ namespace arrenda_me.Models
 
         public virtual Property Parent { get; set; }
 
-        [ForeignKey("Parent")]
+   //     [ForeignKey("Parent")]
         public int id { get; set; }
         public bool furnished { get; set; }
         public bool equipped { get; set; }

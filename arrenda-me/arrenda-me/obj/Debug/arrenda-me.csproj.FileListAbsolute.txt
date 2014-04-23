@@ -18,3 +18,26 @@ C:\Users\Mariline Pinto\Documents\GitHub\arrenda_me\arrenda-me\arrenda-me\bin\Sy
 C:\Users\Mariline Pinto\Documents\GitHub\arrenda_me\arrenda-me\arrenda-me\obj\Debug\arrenda-me.dll
 C:\Users\Mariline Pinto\Documents\GitHub\arrenda_me\arrenda-me\arrenda-me\obj\Debug\arrenda-me.pdb
 C:\Users\Mariline Pinto\Documents\GitHub\arrenda_me\arrenda-me\arrenda-me\obj\Debug\arrenda-me.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
+=======
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\arrenda-me.dll.config
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\arrenda-me.dll
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\arrenda-me.pdb
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\EntityFramework.dll
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Helpers.dll
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Mvc.dll
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Razor.dll
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Webpages.dll
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Webpages.Razor.dll
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\EntityFramework.xml
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Razor.xml
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Webpages.xml
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Webpages.Razor.xml
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Helpers.xml
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\bin\System.Web.Mvc.xml
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\obj\Debug\arrenda-me.csprojResolveAssemblyReference.cache
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\obj\Debug\arrenda-me.dll
+C:\Users\Verónica\Desktop\arrenda_me\arrenda-me\arrenda-me\obj\Debug\arrenda-me.pdb
+>>>>>>> 97a7f80dcd497681f16c85f09fd399dd841b436d

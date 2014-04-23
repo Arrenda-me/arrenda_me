@@ -100,7 +100,30 @@ td:nth-child(5) {
 /*===========================
     ViewProperty
     */
-h3 {
+.tituloAnuncio {
     color:#A63800;
     font-weight:bold;
+}
+#map {
+     position: relative;
+     height: 200px;
+     width:10%;        
+}
+.tituloTabela {
+    color:#FF5600;
+    font-weight:bold;
+    font-size: large;
+    height:50px;
+}
+
+.tabelaCaracteristicas{
+    width: 70%; 
+    margin-top: -15px
+}
+
+#palavraCaracteristicas {
+    color: #FF5600;
+    font-weight:bold;
+    font-size: medium;
+   
 }

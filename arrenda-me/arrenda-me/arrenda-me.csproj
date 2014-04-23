@@ -137,6 +137,8 @@
     <Content Include="Views\ListProperties\Index.cshtml" />
     <Content Include="Views\Notification\Details.cshtml" />
     <Content Include="Views\Property\ListProperties.cshtml" />
+    <Content Include="Views\Property\ViewProperty.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,7 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

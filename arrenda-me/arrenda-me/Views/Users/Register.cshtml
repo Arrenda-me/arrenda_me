@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Registar utilizador";
+}
+
+<h2>Registar utilizador</h2>
+
+
+@using (Html.BeginForm("Register", "Users"))
+{
+    <br />
+    <br />
+    <div style="width: 19.5%; font-weight: bold;" class="form-group">
+        <label style=" color:#A63800" >Email:</label>
+        @Html.TextBox("email")
+
+    </div>
+    
+        <div style="width: 19.5%; font-weight: bold;" class="form-group">
+        <label style=" color:#A63800" >Contacto:</label>
+        @Html.TextBox("contact")
+
+    </div>
+    
+    <div style="width: 19.5%; font-weight: bold;" class="form-group">
+        <label style=" color:#A63800" >Password:</label>
+        @Html.Password("password")
+
+    </div>
+    
+        <div style="width: 19.5%; font-weight: bold;" class="form-group">
+        <label style=" color:#A63800" >Repetir password:</label>
+        @Html.Password("password2")
+
+    </div>
+    
+    <div>
+        <input class="btn btn-warning" type="submit" value="Registar" />&ensp;&ensp;
+
+
+    </div>
+}
+

@@ -28,7 +28,7 @@ namespace arrenda_me.Controllers
 
                 foreach(var u in users)
                     if((u.email == email) && (u.password == password))
-                        return RedirectToAction("Index", "Users");
+                        return RedirectToAction("UserPanel", "Users");
                     
              }
              return View();

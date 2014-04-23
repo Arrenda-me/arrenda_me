@@ -32,20 +32,28 @@
         </div>
 
         <div align="center" id="2" style="display:none">
+@using (Html.BeginForm("Index", "Home"))
+                {
             <br />
             <br />
             <div style="width: 19.5%; font-weight: bold;" class="form-group">
                 <label style=" color:#A63800" for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                @Html.TextBox("email")
+                
             </div>
             <div style="width: 19.5%; font-weight: bold;" class="form-group">
                 <label style=" color:#A63800" for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+                @Html.Password("password")
+               
             </div>
             <div>
+                <input class="btn btn-warning" type="submit" value="Entrar" />&ensp;&ensp;
                 <button type="button" class="btn btn-warning">Registar</button> &ensp;&ensp;
+         
                 <button type="button" class="btn btn-warning">Recuperar Password</button>
+
             </div>
+                }
         </div>
     </div>
 </body>

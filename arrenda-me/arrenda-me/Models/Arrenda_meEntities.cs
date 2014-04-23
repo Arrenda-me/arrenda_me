@@ -20,7 +20,10 @@ namespace arrenda_me.Models
 
 
         public Arrenda_meEntities()
-        {/*
+        {
+
+
+            /*
 
             Property a = new Property { id=1, idTipology=1, idOwner=1, idDistrict=1, idLocality=1, active=true,
                 area=43, description="apartamento mobilado na margem sul", idCity=1, 

@@ -182,3 +182,11 @@ td:nth-child(5) {
     margin-left:5%;
     margin-right:5%
 }
+/*===========================
+    UserPanel
+    */
+.bodyuserpanel {
+    margin-top:12%; 
+    margin-left:10%;
+    margin-right:10%
+}

@@ -92,6 +92,12 @@ td:nth-child(5) {
 .escondida {
         display: none;
     }
+.searchBar{
+    width: 500px;
+    height:33px;
+    border-radius:5px;
+    
+}
 /*===========================
     ViewProperty
     */

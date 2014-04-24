@@ -28,7 +28,7 @@
             <div>
 @using (Html.BeginForm("Search", "Home"))
                 {
-                    @Html.TextBox("searchString", null, new { @style = "width: 500px;heigth: 50px" })
+                    @Html.TextBox("searchString", null, new { @class = "searchBar" })
             
                 <input height=" 100" type=submit class="btn btn-warning" value=Pesquisar>
 }
@@ -40,14 +40,15 @@
                 {
             <br />
             <br />
+ 
             <div style="width: 19.5%; font-weight: bold;" class="form-group">
                 <label style=" color:#A63800" for="exampleInputEmail1">Email address</label>
-                @Html.TextBox("email")
+                @Html.TextBox("email", null, new { @class = "form-control", placeholder = "Enter email" })
                 
             </div>
             <div style="width: 19.5%; font-weight: bold;" class="form-group">
                 <label style=" color:#A63800" for="exampleInputPassword1">Password</label>
-                @Html.Password("password")
+                @Html.Password("password", null, new { @class = "form-control", placeholder = "Enter password" })
                
             </div>
             <div>

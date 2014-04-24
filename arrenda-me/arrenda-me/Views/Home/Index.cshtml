@@ -26,8 +26,12 @@
             <br />
             <br />
             <div>
-                <input type=hidden name=sitesearch /><input id="tab" type=text size=80 placeholder="Tipologia, Localidade...">&nbsp;&nbsp;<input height=" 100" type=submit class="btn btn-warning" value=Pesquisar>
-
+@using (Html.BeginForm("Search", "Home"))
+                {
+                    @Html.TextBox("searchString", null, new { @style = "width: 500px;heigth: 50px" })
+            
+                <input height=" 100" type=submit class="btn btn-warning" value=Pesquisar>
+}
             </div>
         </div>
 

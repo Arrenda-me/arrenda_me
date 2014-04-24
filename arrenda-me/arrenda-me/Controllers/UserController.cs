@@ -25,9 +25,9 @@ namespace arrenda_me.Controllers
             return View();
         }
 
-        public ActionResult UserPanel()
+        public ActionResult UserPanel(string email)
         {
-            return View();
+            return View(email);
         }
 
         private bool isRegisterInputValid(string email, string contact, string password, string password2){
@@ -66,17 +66,31 @@ namespace arrenda_me.Controllers
                     return View();
                 arrendaDB.Users.Add(new Models.User { email = email, password = password, contact = Convert.ToInt32(contact) });
                 arrendaDB.SaveChanges();
-                return RedirectToAction("SuccessfulRegister");
+                return UserPanel(email);
 
             }
             return View();
         }
 
-        public ActionResult SuccessfulRegister()
-        {          
-            return View();
-        }
 
+        [HttpPost]
+        public ActionResult UserPanel(string newEmail, string password, string password2)
+        {
+            if (ModelState.IsValid)
+            {
+                string dummy="123";
+                if (!isRegisterInputValid(newEmail, dummy , password, password2))
+                    return View();
+
+                 Models.User user = arrendaDB.Users.First(i => i.email == newEmail);
+                 user.email = newEmail;
+                 user.password = password;
+                 arrendaDB.SaveChanges();
+                return UserPanel(newEmail);
+
+            }
+            return View(newEmail);
+        }
 
 	}
 }

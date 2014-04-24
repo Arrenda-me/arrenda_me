@@ -28,10 +28,16 @@ namespace arrenda_me.Controllers
 
                 foreach(var u in users)
                     if((u.email == email) && (u.password == password))
-                        return RedirectToAction("UserPanel", "Users");
+                        return  RedirectToAction("UserPanel", "Users");
                     
              }
              return View();
+        }
+
+        [HttpPost]
+        public ActionResult Search(string token)
+        {
+            return View("../Property/ListProperties",token);
         }
 
 	}

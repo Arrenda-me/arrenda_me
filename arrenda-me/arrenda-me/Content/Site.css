@@ -100,30 +100,47 @@ td:nth-child(5) {
 /*===========================
     ViewProperty
     */
-.tituloAnuncio {
+.announcementTitle {
     color:#A63800;
     font-weight:bold;
 }
 #map {
      position: relative;
-     height: 200px;
-     width:10%;        
+     height: 150px;
+     width:100px;
+         
 }
-.tituloTabela {
+.tabelTitle {
     color:#FF5600;
     font-weight:bold;
     font-size: large;
     height:50px;
 }
 
-.tabelaCaracteristicas{
+.tabelCaracteristicas{
     width: 70%; 
-    margin-top: -15px
+    margin-top: -15px;
+    margin-left:5%;
 }
 
-#palavraCaracteristicas {
+#wordCaracteristicas {
     color: #FF5600;
     font-weight:bold;
     font-size: medium;
-   
+}
+.h3 {
+    color: #A63800; 
+    margin-top: -5px;
+    text-align:right;
+    font-size:20px;
+}
+.bodyproperty {
+    margin-top:10%; 
+    margin-left:3%;
+    margin-right:3%
+}
+#pano {
+     position: relative;
+     height: 150px;
+     width:100px;
 }

@@ -14,134 +14,155 @@
 </script>
 
 
-<meta name="viewport" user-scalable=no" />
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
-<script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxlHjGEWG5fuOoc-ADuRXiQ63n4tOQ9ks&sensor=true">
-</script>
 <script type="text/javascript">
     function initialize() {
         var mapOptions = {
-            center: new google.maps.LatLng(38.689261574791736, -9.0966796875),
-            zoom: 8
+            center: new google.maps.LatLng(38.72048355822511, -9.13565218448639),
+            zoom:15
         };
         var map = new google.maps.Map(document.getElementById("map"),
             mapOptions);
+
+        var panoramaOptions = {
+            position: new google.maps.LatLng(38.72048355822511, -9.13565218448639),
+            pov: {
+                heading: 34,
+                pitch: 10
+            }
+        };
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+        map.setStreetView(panorama);
     }
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
 
+
  
-<body style="margin-top:8%; margin-left:5%">
-    
-    <h3 class="tituloAnuncio">Tipologia, Localidade</h3>
-    <div id="carousel-example-generic" class="carousel slide" style="width: 40%; float: left ">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
+<body class="bodyproperty">
+ 
+    <h3 class="announcementTitle">Tipologia, Localidade</h3>
+        <div id="carousel-example-generic" class="carousel slide" style="width: 40%; float: left; height:10%">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="~/content/images/imovel.jpg" />
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/content/images/imovel.jpg" />
+                </div>
+                <div class="item">
+                    <img src="~/content/images/imovel.jpg" />
+                </div>
+                <div class="item">
+                    <img src="~/content/images/imovel.jpg" />
+                </div>
             </div>
-            <div class="item">
-                <img src="~/content/images/imovel.jpg" />
-            </div>
-            <div class="item">
-                <img src="~/content/images/imovel.jpg" />
-            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="icon-next"></span>
+            </a>
+
         </div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
+        <div style="width: 17%; float: left">
 
-    </div>
+            <table class="tabelCaracteristicas">
+                <tr class="tabelTitle">
+                    <td style="color: #FF5600">Preço/mês</td>
+                    <td> valor </td>
+                </tr>
+                <tr>
+                    <td>Nº Wc</td>
+                    <td> valor </td>
+                </tr>
+                <tr>
+                    <td>Área</td>
+                    <td> valor </td>
+                </tr>
+                <tr style="height: 20px"></tr>
+                <tr class="tabelTitle">
+                    <td id="wordCaracteristicas">Características</td>
+                </tr>
+                <tr>
+                    <td>Mobilado</td>
+                    <td><span style="color: #007929" class="glyphicon glyphicon-ok form-control-feedback"></span></td>
+                </tr>
+                <tr>
+                    <td>Equipado</td>
+                    <td><span style="color: #A61000" class="glyphicon glyphicon-remove form-control-feedback"></span></td>
+                </tr>
+                <tr>
+                    <td>Piscina</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Garagem</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Varanda</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Elevador</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Porteiro</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Jardim</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Animais</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
     <div style="width: 15%; float: left">
+        <p class="h3">Localização</p>
+        <br />
         
-        <table class="tabelaCaracteristicas" align="center">
-            <tr class="tituloTabela">
-                <td style="color: #FF5600">Preço/mês</td>
-                <td> valor </td>
-            </tr>
-            <tr>
-                <td>Nº Wc</td>
-                <td> valor </td>
-            </tr>
-            <tr>
-                <td>Área</td>
-                <td> valor </td>
-            </tr>
-            <tr style="height: 20px"></tr>
-            <tr class="tituloTabela">
-                <td id="palavraCaracteristicas">Características</td> 
-            </tr>
-            <tr>
-                <td>Mobilado</td>
-                <td><span style="color: #007929" class="glyphicon glyphicon-ok form-control-feedback"></span></td>
-            </tr>
-            <tr>
-                <td>Equipado</td>
-                <td><span style="color: #A61000" class="glyphicon glyphicon-remove form-control-feedback"></span></td>
-            </tr>
-            <tr>
-                <td>Piscina</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Garagem</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Varanda</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Elevador</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Porteiro</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Jardim</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Animais</td>
-                <td></td>
-            </tr>
-        </table>
-    </div>
-    <div style="width: 37%; float: left" align="right">
-        <h3 style="color: #A63800">Localização</h3>
-        <div id="map" style="width: 80%"></div>
+        <div id="map" style="width: 100%"></div>
 
-        <h3 style="color: #A63800">Solicitar mais informações</h3>
-        <div style="width: 80%" class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nome*">
-        </div>
-        <div style="width: 80%" class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail*">
-        </div>
-        <div style="width: 80%" class="form-group">
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Telem.">
-        </div>
-        <textarea class="form-control" rows="3" style="width: 80%" placeholder="Mensagem*"></textarea>
-        <div>
-            <p></p>
-            <button type="button" class="btn btn-warning">Enviar</button>
-        </div>
-       
     </div>
+    
+    <div style="width: 25%; float: left">
+        <p class="h3">Solicitar mais informações</p>
+        <br />
+        <div style="width: 88%" class="form-group">
+            <input style="margin-left:12%" type="email" class="form-control" id="exampleInputEmail1" placeholder="Nome*">
+        </div>
+        <div style="width: 88%" class="form-group">
+            <input style="margin-left:12%" type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail*">
+        </div>
+        <div style="width: 88%" class="form-group">
+            <input style="margin-left:12%" type="email" class="form-control" id="exampleInputEmail1" placeholder="Telem.">
+            <br>
+        </div>
+    </div>
+    <textarea class="form-control" rows="3" style="width: 40%" placeholder="Mensagem*"></textarea>
+    <h6> * Campo obrigatório</h6>
+
+    <div>
+        <button type="button" class="btn btn-warning">Enviar</button>
+    </div>
+    <div style="width:40%">
+        <p>Descrição da Casa</p>@*<input type="text" name="curso" value="" size="100" >*@
+    </div>
+
+    <div id="pano" style="width: 1px;height:1px"></div>
 </body>

@@ -141,6 +141,8 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Users\Register.cshtml" />
     <Content Include="Views\Users\UserPanel.cshtml" />
+    <Content Include="Views\Users\SuccessfulRegister.cshtml" />
+    <Content Include="Views\Property\AddProperty.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

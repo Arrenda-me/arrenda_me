@@ -6,7 +6,6 @@
     width:90px;
     color:#A63800;
     font-weight:bold;
-
 }
 #pesquisaSelect{
     margin-left:4px;
@@ -35,16 +34,12 @@
     border:#ffffff;
     background:#ffffff;   
     position: relative;
-   
-    
 }
 
 .filter_list {
     margin-top:10%;
     margin-left:20px;
     padding-right:10px;
-
-
 }
 
 td:first-child {
@@ -143,4 +138,41 @@ td:nth-child(5) {
      position: relative;
      height: 150px;
      width:100px;
+}
+/*===========================
+    AddProperty
+    */
+.filterList {
+    margin-left:20px;
+    padding-right:10px;
+}
+
+.titleLocation {
+    color: #A63800; 
+    margin-top:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+.list{
+    margin-left:4px;
+    width:200px;
+    height:35px;
+    color:#A63800;
+    font-weight:bold;
+    border-radius:5px;
+    border-bottom-width:medium;
+}
+.tipologia {
+    margin-left:4px;
+    width:100px;
+    height:35px;
+    color:#A63800;
+    font-weight:bold;
+    border-radius:5px;
+    border-bottom-width:medium;
+}
+.bodyaddproperty {
+    margin-top:10%; 
+    margin-left:5%;
+    margin-right:5%
 }

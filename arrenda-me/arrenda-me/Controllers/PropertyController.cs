@@ -21,7 +21,7 @@ namespace arrenda_me.Controllers
 
         public ActionResult Index()
         {
-           
+
             return View();
         }
 
@@ -32,5 +32,12 @@ namespace arrenda_me.Controllers
 
             return View();
         }
-	}
+
+        public ActionResult AddProperty()
+        {
+
+            return View();
+        }
+
+    }
 }

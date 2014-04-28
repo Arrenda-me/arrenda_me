@@ -39,5 +39,11 @@ namespace arrenda_me.Controllers
             return View();
         }
 
+
+
+        public ActionResult test()
+        {
+            return View();
+        }
     }
 }

@@ -20,7 +20,7 @@
 
     <div id="central">
         <input type="button" onclick="procurarClick();" style="margin-left:38%; height:70px; font-size:20px;" class="btn btn-warning" value="Procuro Casa" id="receita1" /> &ensp;&ensp;&ensp;
-        <input type="button" onclick="arrendarClick(); return;" style="height:70px; font-size:20px;" class="btn btn-warning" value="Arrendo Casa" id="receita2" />
+        <input type="button" onclick="arrendarClick(); return;"style="height:70px; font-size:20px;" class="btn btn-warning" value="Arrendo Casa" id="receita2" />
 
         <div id="1" align="center" style="display:none">
             <br />
@@ -28,7 +28,7 @@
             <div>
 @using (Html.BeginForm("Search", "Home"))
                 {
-                    @Html.TextBox("searchString", null, new { @class = "searchBar" })
+                    @Html.TextBox("searchString", null, new { @class = "searchBar", placeholder="Tipologia, Localidade..." })
             
                 <input height=" 100" type=submit class="btn btn-warning" value=Pesquisar>
 }

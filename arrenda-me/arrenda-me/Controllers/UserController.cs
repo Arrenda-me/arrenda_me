@@ -25,6 +25,12 @@ namespace arrenda_me.Controllers
             return View();
         }
 
+        public ActionResult ViewAnouncement()
+        { 
+            return View();
+        }
+
+
         public ActionResult UserPanel(string email)
         {
             return View(email);

@@ -4,18 +4,28 @@
 }
 
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="utf-8">
-    <title>Demo - JQuery Upload</title>
-    <script src="Scripts/jquery-2.0.3.js" type="text/javascript"></script>
+    <title>Adicionar Anúncio</title>
     <link href="Css/jquery.fileupload.css" rel="stylesheet" type="text/css" />
     <link href="Css/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="Css/bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function getFile() {
+            document.getElementById("upfile").click();
+        }
+        function sub(obj) {
+            var file = obj.value;
+            var fileName = file.split("\\");
+            document.getElementById("yourBtn").innerHTML = fileName[fileName.length - 1];
+            document.myForm.submit();
+            event.preventDefault();
+        }
+    </script>
 </head>
 
-
-<link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 <body class="bodyaddproperty">
     <table>
         <tr>
@@ -43,113 +53,140 @@
     </table>
 
     <h3 class="titleLocation" style="margin-top:5%">Características do Imóvel</h3>
-    
-        <table>
-            
+
+    <table>
+
+        <tr>
+            <td>Tipologia</td>
+            <td>
+                <div>
+                    <select class="tipologia"></select>
+                </div>
+            </td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td style="color: #A63800; font-weight: bold">Preço</td>
+            <td>
+                <div>
+                    <input type="text" class="form-control">
+                </div>
+            </td>
+            <td style="color: #A63800; font-weight: bold">€</td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td style="color: #A63800; font-weight: bold">Área</td>
+            <td>
+                <div>
+                    <input type="text" class="form-control">
+                </div>
+            </td>
+            <td style="color: #A63800; font-weight: bold">m<sup>2</sup></td>
+            <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
+            <td style="color: #A63800; font-weight: bold">Nº WC</td>
+            <td>
+                <div>
+                    <select class="tipologia"></select>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br />
+    Seleccione as características correspondentes à casa em questão&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Descrição
+    <p></p>
+    <div>
+        <table style="width: 5%; float: left; border-collapse: collapse; border-right: 80px solid white;">
             <tr>
-                <td>Tipologia</td>
-                <td>
-                    <div>
-                        <select class="tipologia">
-                        </select>
-                    </div>
-                </td>
-                <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
-                <td style="color: #A63800; font-weight: bold">Preço</td>
-                <td>
-                    <div>
-                        <input type="text" class="form-control">
-                    </div>
-                </td>
-                <td style="color: #A63800; font-weight: bold">€</td>
-                <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
-                <td style="color: #A63800; font-weight: bold">Área</td>
-                <td>
-                    <div>
-                        <input type="text" class="form-control">
-                    </div>
-                </td>
-                <td style="color: #A63800; font-weight: bold">m<sup>2</sup></td>
-                <td>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</td>
-                <td style="color: #A63800; font-weight: bold">Nº WC</td>
-                <td>
-                    <div>
-                        <select class="tipologia"></select>
-                    </div>
-                </td>
+                <td>Mobilado</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Equipado</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Piscina</td>
+                <td><input type="checkbox"></td>
             </tr>
         </table>
-       <br />
-            Seleccione as características correspondentes à casa em questão&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Descrição
-        <p></p>
-        <div>
-            <table style="width: 5%; float: left; border-collapse: collapse; border-right: 80px solid white;">
-                <tr>
-                    <td>Mobilado</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Equipado</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Piscina</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-            </table>
-            <table style="width: 5%; float: left; border-collapse: collapse; border-right: 80px solid white;">
-                <tr>
-                    <td>Garagem</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Varanda</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Elevador</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-            </table>
-            <table style="float:left; width: 5%; border-collapse: collapse; border-right: 80px solid white">
-                <tr>
-                    <td>Porteiro</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Jardim</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-                <tr>
-                    <td>Animais</td>
-                    <td><input type="checkbox"></td>
-                </tr>
-            </table>
-           
-            <textarea class="form-control" rows="3" style="width: 40%"></textarea>
+        <table style="width: 5%; float: left; border-collapse: collapse; border-right: 80px solid white;">
+            <tr>
+                <td>Garagem</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Varanda</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Elevador</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+        <table style="float:left; width: 5%; border-collapse: collapse; border-right: 80px solid white">
+            <tr>
+                <td>Porteiro</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Jardim</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Animais</td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </table>
+
+        <textarea class="form-control" rows="3" style="width: 40%"></textarea>
     </div>
     <h3 class="titleLocation" style="margin-top:5%">Adicionar Fotos</h3>
-    
+
     <div>
         <p></p>
         <!-- The fileinput-button span is used to style the file input field as button -->
-        <span class="btn btn-success fileinput-button">
-            <i class="glyphicon glyphicon-plus"></i>
-            <span>Add image</span>
-        </span>
-        <button type="submit" class="btn btn-primary start">
-            <i class="glyphicon glyphicon-upload"></i>
-            <span>Start upload</span>
-        </button>
-        <button type="reset" class="btn btn-warning cancel">
-            <i class="glyphicon glyphicon-ban-circle"></i>
-            <span>Cancel upload</span>
-        </button>
-        <button type="button" class="btn btn-danger delete">
-            <i class="glyphicon glyphicon-trash"></i>
-            <span>Delete</span>
-        </button>
-        <input type="checkbox" class="toggle">
+        <form role="form" enctype="multipart/form-data" method="post" name="car" action="form_saving.php">
+
+            <div id="fileupload">
+                <div class="fileupload-buttonbar">
+                    <div>
+                        <div style="float:left">
+                            <div class="btn btn-success fileinput-button" onclick="getFile()">
+                                <i class="glyphicon glyphicon-plus"></i>
+                                <span>Adicionar</span>
+                            </div>
+                            <div style='height: 0px;width: 0px; overflow:hidden;'>
+                                <input id="upfile" type="file" value="upload" onchange="sub(this)" />
+                            </div>
+                        </div>
+                        <div>
+                            &nbsp;
+                            <button type="submit" class="btn btn-primary start">
+                                <i class="glyphicon glyphicon-upload"></i>
+                                <span>Start upload</span>
+                            </button>
+                            <button type="reset" class="btn btn-warning cancel">
+                                <i class="glyphicon glyphicon-ban-circle"></i>
+                                <span>Cancel upload</span>
+                            </button>
+                            <button type="button" class="btn btn-danger delete">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                <span>Delete</span>
+                            </button>
+                        </div>
+                        <span class="fileupload-process"></span>
+                    </div>
+                    <div class="col-lg-5 fileupload-progress fade">
+                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                        </div>
+                        <div class="progress-extended">&nbsp;</div>
+                    </div>
+                </div>
+                <!-- The table listing the files available for upload/download -->
+                <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                <br>
+            </div>
+            @*<input type="submit" value="submit">*@
+        </form>
+        @*<input type="checkbox" class="toggle">*@
         <!-- The global file processing state -->
         <span class="fileupload-process"></span>
     </div>
@@ -182,13 +219,13 @@
 
                     <button class="btn btn-primary start">
                         <i class="glyphicon glyphicon-upload"></i>
-                        <span>start</span>
+                        <span>Iniciar</span>
                     </button>
 
 
                     <button class="btn btn-warning cancel">
                         <i class="glyphicon glyphicon-ban-circle"></i>
-                        <span>cancel</span>
+                        <span>Cancelar</span>
                     </button>
 
                 </td>
@@ -198,3 +235,4 @@
 
 
 </body>
+</html>

@@ -75,9 +75,6 @@ td:nth-child(5) {
     font-weight:bold;
     display:block;
     margin-left:30%;
-   
-    
-
 }
 #map-canvas {
             position: relative;
@@ -156,7 +153,7 @@ td:nth-child(5) {
 .titleLocation {
     color: #A63800; 
     margin-top:10px;
-    font-size:20px;
+    font-size:22px;
     font-weight:bold;
 }
 .list{
@@ -182,6 +179,7 @@ td:nth-child(5) {
     margin-left:5%;
     margin-right:5%
 }
+ 
 /*===========================
     UserPanel
     */
@@ -189,4 +187,20 @@ td:nth-child(5) {
     margin-top:12%; 
     margin-left:10%;
     margin-right:10%
+}
+
+/*===========================
+    ViewAnouncement
+    */
+.bodyViewAnouncement {
+    margin-top:10%; 
+    margin-left:10%;
+    margin-right:10%
+}
+
+.typologyLocation {
+    color: #A63800; 
+    margin-top:10px;
+    font-size:16px;
+    font-weight:bold;
 }

@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "ChangeData";
+}
+<body class="bodyaddproperty">
+    <ul class="nav nav-tabs " style="position:fixed; color:black">
+        <li><a href="~/Property/AddProperty">Criar Anúncio</a></li>
+        <li><a href="~/Users/ViewAnouncement">Ver Anúncios</a></li>
+        <li class="active"><a href="~Users/ChangeData">Alterar Dados Pessoais</a></li>
+    </ul>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+ 
+            <label style=" color:#a63800" for="exampleinputemail1">Email</label>
+
+            @using (Html.BeginForm("UserPanel", "Users"))
+            {
+                <br />
+                <br />
+                <div style="font-weight: bold; width: 300px" class="form-group">
+                    <label style=" color:#a63800" for="exampleinputemail1">Novo Email</label>
+                    @Html.TextBox("newEmail", null, new { @class = "form-control" })
+
+                </div>
+                <div style="font-weight: bold; width: 300px" class="form-group">
+                    <label style=" color:#a63800" for="exampleinputpassword1">Nova Password</label>
+                    @Html.Password("password", null, new { @class = "form-control" })
+
+                </div>
+
+
+                <div style="font-weight: bold; width:300px" class="form-group">
+                    <label style=" color:#a63800" for="exampleinputpassword1">Repetir Nova Password</label>
+                    @Html.Password("password2", null, new { @class = "form-control" })
+
+                </div>
+
+                <div>
+                    <input class="btn btn-warning" type="submit" value="Gravar Alterações" />
+                </div>
+            }
+         
+</body>
+

@@ -30,6 +30,10 @@ namespace arrenda_me.Controllers
             return View();
         }
 
+        public ActionResult ChangeData()
+        {
+            return View();
+        }
 
         public ActionResult UserPanel(string email)
         {

@@ -29,13 +29,11 @@ namespace arrenda_me.Controllers
 
         public ActionResult ViewProperty()
         {
-
             return View();
         }
 
         public ActionResult AddProperty()
         {
-
             return View();
         }
 

@@ -145,6 +145,7 @@
     <Content Include="Views\Property\AddProperty.cshtml" />
     <Content Include="Views\Property\test.cshtml" />
     <Content Include="Views\Users\ViewAnouncement.cshtml" />
+    <Content Include="Views\Users\ChangeData.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
